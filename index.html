@@ -1,52 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Passwortschutz – Sicher im Netz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-    input[type="password"] {
-      padding: 10px;
-      font-size: 1rem;
-    }
-    button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .error {
-      color: #f87171;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Sicher im Netz</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            font-family: sans-serif;
+        }
+        #karte-container {
+            position: relative;
+            width: 100%;
+            max-width: 1152px;
+            margin: auto;
+        }
+        #karte-container img {
+            width: 100%;
+            height: auto;
+            max-height: 95vh;
+            object-fit: contain;
+            display: block;
+        }
+        .hotspot {
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <h1>Willkommen bei „Sicher im Netz“</h1>
-  <p>Bitte Passwort eingeben:</p>
-  <input type="password" id="password" placeholder="Passwort">
-  <button onclick="checkPassword()">Einloggen</button>
-  <div id="error" class="error"></div>
-
-  <script>
-    function checkPassword() {
-      const pw = document.getElementById('password').value;
-      const correct = "sicherimnetzMeko2025!#";
-      if (pw === correct) {
-        window.location.href = "start/index.html";
-      } else {
-        document.getElementById('error').innerText = "Falsches Passwort. Versuch’s nochmal.";
-      }
-    }
-  </script>
+    <div id="karte-container">
+        <img src="assets/karte.png" alt="Interaktive Karte">
+        <div class="hotspot" style="top:6%;left:10%;width:30%;height:18%;" onclick="window.location.href='slideshow_datenschutz/index.html'"></div>
+        <div class="hotspot" style="top:7%;left:60%;width:25%;height:15%;" onclick="window.location.href='slideshow_fake_news/index.html'"></div>
+        <div class="hotspot" style="top:34%;left:35%;width:25%;height:13%;" onclick="window.location.href='slideshow_cybergrooming/index.html'"></div>
+        <div class="hotspot" style="top:55%;left:12%;width:25%;height:13%;" onclick="window.location.href='slideshow_hacker/index.html'"></div>
+        <div class="hotspot" style="top:72%;left:10%;width:25%;height:13%;" onclick="window.location.href='slideshow_cybermobbing/index.html'"></div>
+        <div class="hotspot" style="top:30%;left:65%;width:30%;height:18%;" onclick="window.location.href='slideshow_urheberrecht/index.html'"></div>
+        <div class="hotspot" style="top:73%;left:58%;width:30%;height:20%;" onclick="window.location.href='slideshow_mediensucht/index.html'"></div>
+    </div>
 </body>
 </html>
